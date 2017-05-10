@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bot Dashboard</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <link href="dist/css/bot-dashboard.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Bot dashboard</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-table fa-fw"></i> Maybe Later multiple pages</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Bot Dashboard</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel" id="stats-average-ranking-panel">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-star fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge"><span id="stats-average-ranking-value">--</span>/5</div>
+                                    <div>Note moyenne pour <span id="stats-average-ranking-nb-users">--</span> utilisateurs</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-comments fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" id="stats-NLP-calls">--</div>
+                                    <div>Appels NLP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" id="stats-usecases-calls">--</div>
+                                    <div>Usecases appelés</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--
+                <div class="col-lg-3 col-md-6">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-support fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">-</div>
+                                    <div>-!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h2>Envoie de message aux utilisateurs</h2>
+                        </div>
+                      	<div class="panel-body">
+                            <div class="col-md-12">
+                                
+                                <ul class="nav nav-tabs" id="nav-modes" data-mode="push">
+                                  <li role="presentation" class="active" data-mode="push"><a href="#" class="switch-mode">Message push</a></li>
+                                  <li role="presentation" data-mode="offer"><a href="#" class="switch-mode">Définir message main offer</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-12" id="push">
+                                <h3>Critères d'envoi</h3>
+                                <form class="form-horizontal">
+                                    <div class="row" id="criteres-list">
+
+                                    </div>
+                                </form>
+                            </div>
+							<div class="col-md-12">
+								<h3>Message</h3>
+								<form class="form-horizontal">
+									<div id="messages">
+										<div class="message__1 panel panel-default" data-id="1">
+					                        <div class="panel-heading">
+					                            <h3 class="pull-left">Element n°1</h3>
+					                            <div class="pull-right">
+					                            	<input type="text" class="message__1__timeout" placeholder="Temporisation (millisecondes)" value="0">
+					                            </div>
+					                            <div class="clearfix"></div>
+					                        </div>
+	                      					<div class="panel-body">
+												<div class="form-group">
+													<label for="message__1__type" class="col-sm-4 control-label">Type de message</label>
+													<div class="col-sm-8">
+														<select class="form-control element-type" id="message__1__type">
+														  <option value="text">Text</option>
+														  <option value="image">Image</option>
+														  <option value="video">Video</option>
+														  <option value="carousel">Carousel</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group message__1__contents">
+													<label for="message__1__text" class="col-sm-4 control-label">Text</label>
+													<div class="col-sm-8">
+														<input type="text" class="form-control" id="message__1__text" placeholder="Contenu du message">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="control_form text-center">
+										<button class="btn btn-default" id="add_element_to_msg">Ajouter un élément au message</button>
+										<button class="btn btn-primary" id="send_message">Envoyer le message</button>
+									</div>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="vendor/raphael/raphael.min.js"></script>
+    <script src="vendor/morrisjs/morris.min.js"></script>
+    <script src="data/morris-data.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="dist/js/sb-admin-2.js"></script>
+
+	<!-- Dashboard main JS file -->
+    <script src="dist/js/bot-dashboard.js"></script>
+
+
+</body>
+
+</html>

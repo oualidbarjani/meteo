@@ -1,0 +1,13 @@
+{
+    "default_text": "Je n'ai pas compris. Tu peux reformuler s'il te plais ?",
+    "default_number": "Hum, je n'ai pas reconnu ce code produit, peux tu en rentrer un nouveau?",
+    "default_confirm": "Je n'ai pas compris. Peux tu répondre par 'oui' ou 'non' s'il te plais ?",
+    "list_or": " ou ",
+    "list_or_more": ", ou ",
+    "confirm_yes": "oui",
+    "confirm_no": "non",
+    "default_choice": "Je n'ai pas compris. Peux tu choisir un élément de la liste ?",
+    "default_time": "Je n'ai pas compris la date que tu as entré. Tu peux essayé avec le format suivant s'il te plait: (MM/JJ/AAAA HH:MM:SS).",
+    "default_file": "Je n'ai pas reçut de fichier. Tu peux ré-essayer ?",
+    "default_error": "Oups. Quelque chose s'est mal passé. Il faut qu'on recommence."
+}
