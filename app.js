@@ -19,14 +19,7 @@ var openWeatherMapAppId = 'd0c4e9ad435b3a5a337d72ccadab70ce';
 //---------------------------------------------------------
 // Setup
 //---------------------------------------------------------
-//webhook
-app.get('/webhook', function (req, res) {
-    if (req.query['hub.verify_token'] === 'meteo-mdp') {
-      res.send(req.query['hub.challenge']);
-    } else {
-      res.send('Error, wrong validation token');    
-    }
-  });
+
 // Setup Restify Server
 var server = restify.createServer();
 server.listen(process.env.port || process.env.PORT || 3978, function () {
